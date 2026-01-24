@@ -16,45 +16,71 @@
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: #f0f0f0;
       color: #333;
       text-align: center;
     }
 
+    /* ヘッダー */
     header {
-      background: #222;
+      background: linear-gradient(135deg, #56ab2f, #a8e063); /* 緑系グラデーション */
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
     }
 
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* メイン */
     main {
-      padding: 20px;
+      padding: 30px 20px;
     }
 
+    /* リンクボックス */
     .link-box {
       background: #fff;
       margin: 15px auto;
-      padding: 15px;
+      padding: 20px;
       max-width: 420px;
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
     }
 
+    /* ボックス全体が浮き上がる */
+    .link-box:hover,
+    .link-box:focus-within {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* リンクとアイコン */
     .link-box a {
+      display: flex;
+      align-items: center;
       color: #007bff;
-      text-decoration: none;
       font-weight: bold;
-      display: block;
       font-size: 18px;
+      text-decoration: none;
     }
 
-    /* アイコンサイズ・位置調整 */
     .link-box i {
       font-size: 24px;
-      vertical-align: middle;
       margin-right: 8px;
     }
 
+    /* フッター */
     footer {
       margin-top: 40px;
       padding: 20px;
@@ -63,9 +89,25 @@
     }
 
     footer a {
-      font-weight: normal;
       color: #007bff;
       text-decoration: none;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 480px) {
+      .link-box {
+        max-width: 90%;
+        padding: 15px;
+      }
+      header h1 {
+        font-size: 28px;
+      }
+      header p {
+        font-size: 16px;
+      }
+      .link-box a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -104,9 +146,7 @@
 
   <footer>
     <p>© 2026 ぴー</p>
-    <p>
-      <a href="terms.html">利用規約</a>
-    </p>
+    <p><a href="terms.html">利用規約</a></p>
   </footer>
 
 </body>
