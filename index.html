@@ -21,54 +21,59 @@
       text-align: center;
     }
 
-    /* ヘッダー */
+    /* ヘッダー：強めの緑グラデーション */
     header {
-      background: linear-gradient(135deg, #56ab2f, #a8e063); /* 緑系グラデーション */
+      background: linear-gradient(135deg, #2c7a2c, #56ab2f, #a8e063); /* 緑系グラデーションを強化 */
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
       text-align: center;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 40px;
       margin: 0;
     }
 
     header p {
-      font-size: 18px;
-      margin-top: 10px;
+      font-size: 20px;
+      margin-top: 12px;
     }
 
     /* メイン */
     main {
-      padding: 30px 20px;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* ボタンを中央に */
     }
 
     /* リンクボックス */
     .link-box {
       background: #fff;
-      margin: 15px auto;
-      padding: 20px;
+      margin: 15px 0;
+      padding: 20px 30px;
+      width: 100%;
       max-width: 420px;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
-    /* ボックス全体が浮き上がる */
+    /* ボックス浮き上がる効果 */
     .link-box:hover,
     .link-box:focus-within {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
     /* リンクとアイコン */
     .link-box a {
       display: flex;
       align-items: center;
+      justify-content: center; /* 中央寄せ */
       color: #007bff;
       font-weight: bold;
       font-size: 18px;
@@ -77,12 +82,12 @@
 
     .link-box i {
       font-size: 24px;
-      margin-right: 8px;
+      margin-right: 10px;
     }
 
     /* フッター */
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       padding: 20px;
       font-size: 14px;
       background: #eee;
@@ -100,7 +105,7 @@
         padding: 15px;
       }
       header h1 {
-        font-size: 28px;
+        font-size: 32px;
       }
       header p {
         font-size: 16px;
