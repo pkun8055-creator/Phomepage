@@ -12,75 +12,109 @@
   />
 
   <style>
-/* 全体背景を少しだけ明るいグレーに */
-body {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      color: #333;
+      text-align: center;
+    }
 
-/* ヘッダー：より洗練されたカーブに */
-header {
-  background: linear-gradient(135deg, #2c7a2c, #56ab2f);
-  color: #fff;
-  padding: 80px 20px;
-  border-bottom-left-radius: 40px; /* 角丸を大きく */
-  border-bottom-right-radius: 40px;
-  box-shadow: 0 10px 30px rgba(44, 122, 44, 0.2);
-}
+    /* ヘッダー：強めの緑グラデーション */
+    header {
+      background: linear-gradient(135deg, #2c7a2c, #56ab2f, #a8e063); /* 緑系グラデーションを強化 */
+      color: #fff;
+      padding: 60px 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
 
-header h1 {
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+    }
 
-/* リンクボックスの改良 */
-.link-box {
-  background: #fff;
-  margin: 12px 0;
-  padding: 0; /* paddingを0にしてaタグを広げる */
-  width: 90%;
-  max-width: 450px;
-  border-radius: 20px; /* より丸みを持たせる */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden; /* はみ出し防止 */
-}
+    header p {
+      font-size: 20px;
+      margin-top: 12px;
+    }
 
-/* リンクエリア全体をクリック可能にし、色を調整 */
-.link-box a {
-  display: flex;
-  align-items: center;
-  padding: 20px 25px;
-  color: #2c7a2c; /* 文字色を緑系に統一 */
-  font-weight: 600;
-  font-size: 18px;
-  text-decoration: none;
-  justify-content: flex-start; /* 左寄せに変更して整列させる */
-}
+    /* メイン */
+    main {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* ボタンを中央に */
+    }
 
-/* アイコンを少し目立たせる */
-.link-box i, .link-box span.emoji {
-  font-size: 24px;
-  margin-right: 15px;
-  width: 30px; /* アイコンの幅を固定してテキストの位置を揃える */
-  text-align: center;
-}
+    /* リンクボックス */
+    .link-box {
+      background: #fff;
+      margin: 15px 0;
+      padding: 20px 30px;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.25s ease;
+    }
 
-/* ホバー時の挙動をリッチに */
-.link-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-  background: #f0fff0; /* ほんのり緑に */
-}
+    /* ボックス浮き上がる効果 */
+    .link-box:hover,
+    .link-box:focus-within {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
 
-footer {
-  background: transparent; /* フッターはあえて背景なしでスッキリ */
-  color: #888;
-}  </style>
+    /* リンクとアイコン */
+    .link-box a {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* 中央寄せ */
+      color: #007bff;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .link-box i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    /* フッター */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      background: #eee;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 480px) {
+      .link-box {
+        max-width: 90%;
+        padding: 15px;
+      }
+      header h1 {
+        font-size: 32px;
+      }
+      header p {
+        font-size: 16px;
+      }
+      .link-box a {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
