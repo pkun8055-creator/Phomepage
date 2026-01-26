@@ -5,113 +5,128 @@
   <title>ぴー のサイト集</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome CDN -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
 
   <style>
+    /* 全体の設定 */
     body {
-      font-family: sans-serif;
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f0f0;
+      background: #f8f9fa; /* 明るく清潔感のある背景色 */
       color: #333;
-      text-align: center;
+      line-height: 1.6;
     }
 
-    /* ヘッダー：強めの緑グラデーション */
+    /* ヘッダー：モダンなカーブとグラデーション */
     header {
-      background: linear-gradient(135deg, #2c7a2c, #56ab2f, #a8e063); /* 緑系グラデーションを強化 */
+      background: linear-gradient(135deg, #2c7a2c, #56ab2f);
       color: #fff;
-      padding: 60px 20px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      padding: 80px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 10px 30px rgba(44, 122, 44, 0.2);
       text-align: center;
     }
 
     header h1 {
-      font-size: 40px;
+      font-size: 36px;
       margin: 0;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 20px;
-      margin-top: 12px;
+      font-size: 18px;
+      margin-top: 15px;
+      opacity: 0.9;
     }
 
-    /* メイン */
+    /* メインコンテンツ */
     main {
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
-      align-items: center; /* ボタンを中央に */
+      align-items: center;
     }
 
-    /* リンクボックス */
+    /* リンクボックス：カード風デザイン */
     .link-box {
       background: #fff;
-      margin: 15px 0;
-      padding: 20px 30px;
+      margin: 12px 0;
       width: 100%;
       max-width: 420px;
-      border-radius: 14px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: all 0.25s ease;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden; /* 角丸からはみ出さないように */
     }
 
-    /* ボックス浮き上がる効果 */
-    .link-box:hover,
-    .link-box:focus-within {
-      transform: translateY(-6px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    }
-
-    /* リンクとアイコン */
+    /* リンクエリア全体をボタン化 */
     .link-box a {
       display: flex;
       align-items: center;
-      justify-content: center; /* 中央寄せ */
-      color: #007bff;
-      font-weight: bold;
+      padding: 20px 25px;
+      color: #2c7a2c; /* 文字色をテーマカラーの緑に */
+      font-weight: 600;
       font-size: 18px;
       text-decoration: none;
+      transition: background-color 0.3s;
     }
 
-    .link-box i {
+    /* アイコンと絵文字のサイズ・位置固定 */
+    .link-box i, .link-box .emoji {
       font-size: 24px;
-      margin-right: 10px;
+      margin-right: 15px;
+      width: 32px; /* 横幅を揃えてテキストの開始位置を統一 */
+      text-align: center;
+      display: inline-block;
+    }
+
+    /* ホバー（マウスを乗せた時）の動き */
+    .link-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      background-color: #f0fff0; /* ほんのり薄緑に */
+    }
+
+    .link-box:active {
+      transform: scale(0.98); /* クリックした瞬間に少し凹む演出 */
     }
 
     /* フッター */
     footer {
-      margin-top: 50px;
-      padding: 20px;
+      margin-top: 60px;
+      padding: 40px 20px;
       font-size: 14px;
-      background: #eee;
+      color: #888;
+      text-align: center;
     }
 
     footer a {
-      color: #007bff;
+      color: #56ab2f;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    /* レスポンシブ */
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* レスポンシブ対応（スマホ向け微調整） */
     @media (max-width: 480px) {
-      .link-box {
-        max-width: 90%;
-        padding: 15px;
+      header {
+        padding: 60px 20px;
       }
       header h1 {
-        font-size: 32px;
-      }
-      header p {
-        font-size: 16px;
+        font-size: 28px;
       }
       .link-box a {
         font-size: 16px;
+        padding: 18px 20px;
       }
     }
   </style>
@@ -126,13 +141,13 @@
   <main>
     <div class="link-box">
       <a href="https://discord.com/oauth2/authorize?client_id=1423901864038236221" target="_blank">
-        🤖 ぴーbot（Discord Bot）
+        <span class="emoji">🤖</span> ぴーbot（Discord Bot）
       </a>
     </div>
 
     <div class="link-box">
       <a href="https://pkun8055-creator.github.io/webchat.github.io/" target="_blank">
-        💬 Webチャット
+        <span class="emoji">💬</span> Webチャット
       </a>
     </div>
 
@@ -144,7 +159,7 @@
 
     <div class="link-box">
       <a href="https://discord.gg/EJm5zHZnvh" target="_blank">
-        <i class="fab fa-discord" style="color:#7289DA;"></i> Discordサーバー
+        <i class="fab fa-discord" style="color:#5865F2;"></i> Discordサーバー
       </a>
     </div>
   </main>
